@@ -14,5 +14,23 @@ namespace PROYECTO_PROGRAMACION_DSCV__1
         {
             InitializeComponent();
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtnumerotel_Validating(object sender, CancelEventArgs e)
+        {
+            string mensaje = ValidacionCliente.ValidarTelefono(txtnumerotel.Text);
+            errprovider.SetError(txtnumerotel, mensaje);
+            lblerrortel.Text = mensaje;
+
+        }
+
+        private void txtnumerotel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
